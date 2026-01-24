@@ -28,6 +28,7 @@
                 <span class="text-xl font-bold tracking-tighter text-blue-600"
                     >MF.</span
                 >
+
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#home" class="hover:text-blue-600 transition"
                         >Beranda</a
@@ -45,9 +46,44 @@
                         >Kontak</a
                     >
                 </div>
-                <button class="md:hidden text-slate-600">
-                    <i data-lucide="menu"></i>
+
+                <button
+                    id="menu-btn"
+                    class="md:hidden text-slate-600 focus:outline-none"
+                >
+                    <i data-lucide="menu" id="menu-icon"></i>
                 </button>
+            </div>
+
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-4 shadow-lg"
+            >
+                <a
+                    href="#home"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Beranda</a
+                >
+                <a
+                    href="#about"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Tentang</a
+                >
+                <a
+                    href="#experience"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Pengalaman</a
+                >
+                <a
+                    href="#gallery"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Album</a
+                >
+                <a
+                    href="#contact"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Kontak</a
+                >
             </div>
         </nav>
 
@@ -448,6 +484,28 @@
         <script>
             // Inisialisasi Ikon
             lucide.createIcons();
+        </script>
+
+        <script>
+            // Inisialisasi Ikon Lucide
+            lucide.createIcons();
+
+            // Logika Menu Mobile
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const menuLinks = mobileMenu.querySelectorAll("a");
+
+            // Fungsi buka/tutup menu
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // Menutup menu secara otomatis saat salah satu link diklik
+            menuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                });
+            });
         </script>
     </body>
 </html>
