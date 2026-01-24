@@ -536,17 +536,29 @@
                     mobileMenu.classList.add("hidden");
                 });
             });
-        </script>
 
-        // Fungsi Lightbox Galeri function openModal(imgSrc) { const modal =
-        document.getElementById('photoModal'); const modalImg =
-        document.getElementById('modalImg'); modalImg.src = imgSrc;
-        modal.classList.remove('hidden'); document.body.style.overflow =
-        'hidden'; // Matikan scroll saat foto terbuka } function closeModal() {
-        const modal = document.getElementById('photoModal');
-        modal.classList.add('hidden'); document.body.style.overflow = 'auto'; //
-        Aktifkan kembali scroll } // Menutup modal jika area luar gambar diklik
-        document.getElementById('photoModal').addEventListener('click',
-        function(e) { if (e.target === this) closeModal(); });
+            // Fungsi Lightbox Galeri
+            function openModal(imgSrc) {
+                const modal = document.getElementById("photoModal");
+                const modalImg = document.getElementById("modalImg");
+
+                modalImg.src = imgSrc;
+                modal.classList.remove("hidden");
+                document.body.style.overflow = "hidden"; // Matikan scroll saat foto terbuka
+            }
+
+            function closeModal() {
+                const modal = document.getElementById("photoModal");
+                modal.classList.add("hidden");
+                document.body.style.overflow = "auto"; // Aktifkan kembali scroll
+            }
+
+            // Menutup modal jika area luar gambar diklik
+            document
+                .getElementById("photoModal")
+                .addEventListener("click", function (e) {
+                    if (e.target === this) closeModal();
+                });
+        </script>
     </body>
 </html>
