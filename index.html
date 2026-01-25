@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Muhammad Fadlan | Professional Profile</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            .glass {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+            }
+
+            #mobile-menu {
+                transition: all 0.3s ease-in-out;
+            }
+
+            /* Tambahkan di dalam <style> */
+            #song-info {
+                transition: all 0.3s ease;
+                animation: slideIn 0.5s ease-out;
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* Efek hover untuk tombol musik */
+            #music-control:hover,
+            #prev-song:hover,
+            #next-song:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Progress bar (opsional tambahan) */
+            #progress-container {
+                width: 100px;
+                height: 4px;
+                background: #e2e8f0;
+                border-radius: 2px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            #progress-bar {
+                height: 100%;
+                background: #3b82f6;
+                width: 0%;
+                transition: width 0.1s linear;
+            }
+        </style>
+    </head>
+    <body class="bg-slate-50 text-slate-900">
+        <nav class="fixed w-full z-50 glass border-b border-slate-200">
+            <div
+                class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between"
+            >
+                <span class="text-xl font-bold tracking-tighter text-blue-600"
+                    >MF.</span
+                >
+
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#home" class="hover:text-blue-600 transition"
+                        >Beranda</a
+                    >
+                    <a href="#about" class="hover:text-blue-600 transition"
+                        >Tentang</a
+                    >
+                    <a href="#experience" class="hover:text-blue-600 transition"
+                        >Pengalaman</a
+                    >
+                    <a href="#gallery" class="hover:text-blue-600 transition"
+                        >Album</a
+                    >
+                    <a href="#contact" class="hover:text-blue-600 transition"
+                        >Kontak</a
+                    >
+                </div>
+
+                <button
+                    id="menu-btn"
+                    class="md:hidden text-slate-600 focus:outline-none p-2 relative w-10 h-10"
+                >
+                    <i
+                        data-lucide="menu"
+                        id="icon-bars"
+                        class="absolute inset-0 m-auto transition-all duration-300 transform scale-100 opacity-100"
+                    ></i>
+                    <i
+                        data-lucide="x"
+                        id="icon-close"
+                        class="absolute inset-0 m-auto transition-all duration-300 transform scale-0 opacity-0"
+                    ></i>
+                </button>
+            </div>
+
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-4 shadow-lg"
+            >
+                <a
+                    href="#home"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Beranda</a
+                >
+                <a
+                    href="#about"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Tentang</a
+                >
+                <a
+                    href="#experience"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Pengalaman</a
+                >
+                <a
+                    href="#gallery"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Album</a
+                >
+                <a
+                    href="#contact"
+                    class="block text-slate-600 font-medium hover:text-blue-600 transition"
+                    >Kontak</a
+                >
+            </div>
+        </nav>
+
+        <section id="home" class="pt-16">
+            <div class="w-full h-[300px] md:h-[450px] overflow-hidden relative">
+                <img
+                    src="images/banner.jpg"
+                    alt="Muhammad Fadlan"
+                    class="w-full h-full object-cover"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"
+                ></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 -mt-24 relative z-10">
+                <div
+                    class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100 text-center"
+                >
+                    <div
+                        class="inline-block px-3 py-1.5 mb-6 text-[10px] xs:text-xs md:text-sm font-semibold text-blue-600 bg-blue-50 rounded-full border border-blue-100 whitespace-nowrap overflow-hidden text-ellipsis"
+                    >
+                        Kepala Kantor Kas @ PT BPR NTB PERSERODA
+                    </div>
+
+                    <h1
+                        class="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 tracking-tighter text-slate-900 whitespace-nowrap"
+                    >
+                        Muhammad <span class="text-blue-600">Fadlan</span>
+                    </h1>
+
+                    <p
+                        class="text-lg md:text-xl text-slate-600 mb-8 italic font-light"
+                    >
+                        "Don’t stop when you’re tired, stop when you’re done."
+                    </p>
+
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <a
+                            href="#contact"
+                            class="bg-blue-600 text-white px-10 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+                        >
+                            Hubungi Saya
+                        </a>
+                        <a
+                            href="#about"
+                            class="bg-white border-2 border-slate-200 px-10 py-3.5 rounded-xl font-bold text-slate-700 hover:bg-slate-50 transition-all"
+                        >
+                            Tentang Saya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="about"
+            class="py-20 bg-white"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+        >
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-slate-800">
+                            Halo, Saya Fadlan.
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            Lulusan Teknik Informatika dari Universitas Mercu
+                            Buana Yogyakarta yang kini meniti karir profesional
+                            di industri perbankan. Sebagai
+                            <strong>Kepala Kantor Kas</strong> di PT BPR NTB
+                            PERSERODA, saya bertanggung jawab dalam memimpin
+                            operasional harian, mengelola risiko, serta
+                            memastikan standar pelayanan nasabah yang prima guna
+                            mendukung pertumbuhan bisnis di wilayah kerja saya.
+                        </p>
+                    </div>
+
+                    <div class="space-y-8 md:pt-12">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800 mb-4">
+                                Keahlian (Skills)
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm font-medium border border-blue-100"
+                                    >Service Excellent</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm font-medium border border-blue-100"
+                                    >Credit Analyst</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm font-medium border border-blue-100"
+                                    >Risk Mitigation</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-slate-50 text-slate-700 rounded-md text-sm font-medium border border-slate-100"
+                                    >Office Suite</span
+                                >
+                                <span
+                                    class="px-3 py-1 bg-slate-50 text-slate-700 rounded-md text-sm font-medium border border-slate-100"
+                                    >Software Engineering</span
+                                >
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="p-4 bg-slate-50 rounded-xl border border-slate-100"
+                            >
+                                <p
+                                    class="text-slate-500 text-xs uppercase tracking-wider font-semibold mb-1"
+                                >
+                                    Lokasi
+                                </p>
+                                <p
+                                    class="font-bold text-slate-800 text-sm md:text-base"
+                                >
+                                    Empang, NTB
+                                </p>
+                            </div>
+                            <div
+                                class="p-4 bg-slate-50 rounded-xl border border-slate-100"
+                            >
+                                <p
+                                    class="text-slate-500 text-xs uppercase tracking-wider font-semibold mb-1"
+                                >
+                                    Pendidikan
+                                </p>
+                                <p
+                                    class="font-bold text-slate-800 text-sm md:text-base"
+                                >
+                                    S1 Teknik Informatika
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="experience"
+            class="py-20 px-4 bg-slate-50"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+        >
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center text-slate-800">
+                    Pengalaman Kerja
+                </h2>
+
+                <div
+                    class="space-y-12 border-l-2 border-blue-200 ml-4 pl-8 relative"
+                >
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-sm"
+                        ></div>
+                        <span
+                            class="text-sm font-bold text-blue-600 uppercase tracking-wider"
+                            >2021 – Sekarang</span
+                        >
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">
+                            PT BPR NTB PERSERODA
+                        </h3>
+
+                        <div class="mt-6 space-y-6">
+                            <div
+                                class="bg-blue-50 p-5 rounded-xl shadow-sm border border-blue-100"
+                            >
+                                <h4 class="font-bold text-blue-800">
+                                    KC Empang – Kepala Kantor Kas Lab. Jambu
+                                    <span
+                                        class="text-slate-500 font-normal ml-2 text-sm"
+                                        >(2026 – Sekarang)</span
+                                    >
+                                </h4>
+                                <ul
+                                    class="mt-3 text-slate-600 text-sm space-y-2 list-disc list-inside"
+                                >
+                                    <li>
+                                        Memimpin dan bertanggung jawab atas
+                                        operasional harian kantor kas guna
+                                        memastikan pelayanan nasabah berjalan
+                                        efektif dan efisien.
+                                    </li>
+                                    <li>
+                                        Mengawasi pengelolaan likuiditas kas
+                                        serta memastikan kepatuhan terhadap
+                                        prosedur perbankan dan standar layanan
+                                        perusahaan.
+                                    </li>
+                                    <li>
+                                        Mengoordinasikan aktivitas pemasaran
+                                        produk perbankan di wilayah Lab. Jambu
+                                        untuk mencapai target pertumbuhan dana
+                                        dan penyaluran kredit.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="bg-white p-5 rounded-xl shadow-sm border border-slate-100"
+                            >
+                                <h4 class="font-bold text-slate-800">
+                                    KC Plampang – Analis Kredit
+                                    <span
+                                        class="text-slate-500 font-normal ml-2 text-sm"
+                                        >(2023 – 2026)</span
+                                    >
+                                </h4>
+                                <ul
+                                    class="mt-3 text-slate-600 text-sm space-y-2 list-disc list-inside"
+                                >
+                                    <li>
+                                        Melakukan analisis mendalam terhadap
+                                        aspek kualitatif dan kuantitatif calon
+                                        debitur untuk menentukan tingkat
+                                        kelayakan kredit.
+                                    </li>
+                                    <li>
+                                        Menyusun laporan rekomendasi kredit
+                                        dengan mempertimbangkan mitigasi risiko
+                                        guna menjaga kualitas aset produktif
+                                        bank.
+                                    </li>
+                                    <li>
+                                        Melakukan peninjauan lapangan (on-site
+                                        visit) untuk memastikan kebenaran data
+                                        dan legalitas agunan nasabah.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="bg-white p-5 rounded-xl shadow-sm border border-slate-100"
+                            >
+                                <h4 class="font-bold text-slate-800">
+                                    KC Bima – Admin & Staf Kredit
+                                    <span
+                                        class="text-slate-500 font-normal ml-2 text-sm"
+                                        >(2023)</span
+                                    >
+                                </h4>
+                                <ul
+                                    class="mt-3 text-slate-600 text-sm space-y-2 list-disc list-inside"
+                                >
+                                    <li>
+                                        Mengelola administrasi dokumen
+                                        pembiayaan dan memastikan seluruh berkas
+                                        kredit lengkap sesuai regulasi OJK.
+                                    </li>
+                                    <li>
+                                        Melakukan pemeliharaan data portofolio
+                                        kredit pada sistem perbankan guna
+                                        akurasi laporan posisi pinjaman nasabah.
+                                    </li>
+                                    <li>
+                                        Melakukan monitoring rutin terhadap
+                                        kolektibilitas nasabah untuk mencegah
+                                        terjadinya pembiayaan bermasalah.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="bg-white p-5 rounded-xl shadow-sm border border-slate-100"
+                            >
+                                <h4 class="font-bold text-slate-800">
+                                    KC Bima – Staf IT
+                                    <span
+                                        class="text-slate-500 font-normal ml-2 text-sm"
+                                        >(2021 – 2023)</span
+                                    >
+                                </h4>
+                                <ul
+                                    class="mt-3 text-slate-600 text-sm space-y-2 list-disc list-inside"
+                                >
+                                    <li>
+                                        Melaksanakan pengiriman laporan data
+                                        SLIK secara rutin setiap bulan kepada
+                                        Otoritas Jasa Keuangan (OJK) sesuai
+                                        ketentuan yang berlaku.
+                                    </li>
+                                    <li>
+                                        Memastikan stabilitas jaringan
+                                        komunikasi data dan keamanan sistem
+                                        aplikasi perbankan di lingkungan kantor
+                                        cabang.
+                                    </li>
+                                    <li>
+                                        Memberikan dukungan teknis
+                                        (troubleshooting) perangkat keras dan
+                                        lunak untuk kelancaran operasional bank.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-sm"
+                        ></div>
+                        <span
+                            class="text-sm font-bold text-slate-500 uppercase tracking-wider"
+                            >2019 – 2020</span
+                        >
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">
+                            PT Bank BNI Syariah
+                        </h3>
+
+                        <div class="mt-6 space-y-4">
+                            <div
+                                class="bg-white p-5 rounded-xl shadow-sm border border-slate-100"
+                            >
+                                <h4 class="font-bold text-slate-800">
+                                    Sales Mikro Asisten
+                                    <span
+                                        class="text-slate-500 font-normal ml-2 text-sm"
+                                        >(Sumbawa & Bima)</span
+                                    >
+                                </h4>
+                                <ul
+                                    class="mt-3 text-slate-600 text-sm space-y-2 list-disc list-inside"
+                                >
+                                    <li>
+                                        Mencari dan mengakuisisi potensi nasabah
+                                        baru untuk produk pembiayaan mikro
+                                        berbasis prinsip syariah.
+                                    </li>
+                                    <li>
+                                        Memberikan edukasi dan konsultasi produk
+                                        keuangan kepada masyarakat untuk
+                                        meningkatkan literasi perbankan syariah.
+                                    </li>
+                                    <li>
+                                        Mencapai target kinerja pemasaran
+                                        tahunan yang ditetapkan oleh kantor
+                                        cabang melalui strategi canvassing yang
+                                        efektif.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="gallery"
+            class="py-20 bg-slate-50"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+        >
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-12 text-slate-800">
+                    Album Saya
+                </h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-1.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-1.jpg"
+                                alt="Work 1"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-2.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-2.jpg"
+                                alt="Work 2"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-3.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-3.jpg"
+                                alt="Work 3"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-4.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-4.jpg"
+                                alt="Work 4"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-5.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-5.jpg"
+                                alt="Work 5"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-6.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-6.jpg"
+                                alt="Work 6"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-7.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-7.jpg"
+                                alt="Work 7"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-8.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-8.jpg"
+                                alt="Work 8"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-9.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-9.jpg"
+                                alt="Work 9"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-10.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-10.jpg"
+                                alt="Work 10"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-11.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-11.jpg"
+                                alt="Work 11"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-2 rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group"
+                        onclick="openModal('images/work-12.jpg')"
+                    >
+                        <div class="aspect-square overflow-hidden rounded-xl">
+                            <img
+                                src="images/work-12.jpg"
+                                alt="Work 12"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="contact"
+            class="py-20 px-4"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+        >
+            <div
+                class="max-w-4xl mx-auto glass border border-slate-200 rounded-3xl p-8 md:p-12 shadow-xl"
+            >
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-2">Mari Terhubung</h2>
+                    <p class="text-slate-500">
+                        Ada pertanyaan atau peluang kerjasama?
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="space-y-2">
+                        <div
+                            class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto"
+                        >
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <p class="font-semibold text-sm">Email</p>
+                        <a
+                            href="mailto:mfadlan14@gmail.com"
+                            class="text-blue-600 text-sm"
+                            >mfadlan14@gmail.com</a
+                        >
+                    </div>
+                    <div class="space-y-2">
+                        <div
+                            class="w-12 h-12 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto"
+                        >
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <p class="font-semibold text-sm">Telepon</p>
+                        <a
+                            href="tel:+6282139887079"
+                            class="text-green-600 text-sm"
+                            >+62 821-3988-7079</a
+                        >
+                    </div>
+                    <div class="space-y-2">
+                        <div
+                            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center mx-auto"
+                        >
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <p class="font-semibold text-sm">Lokasi</p>
+                        <p class="text-slate-600 text-sm">Empang, NTB, 84384</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-10 text-center border-t border-slate-200">
+            <p class="text-slate-500 text-sm">
+                ©2026 Muhammad Fadlan. Dibuat dengan ❤️
+            </p>
+        </footer>
+
+        <!-- Hapus kode YouTube yang lama -->
+        <!-- Ganti dengan ini di dalam <body> sebelum script -->
+
+        <!-- Tambahkan di dalam <body>, sebelum script utama -->
+        <audio id="bg-music"></audio>
+
+        <!-- Kontrol musik (tambahkan tombol next/prev) -->
+        <div class="fixed bottom-6 left-6 z-[60] flex items-center gap-2">
+            <button
+                id="prev-song"
+                class="bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-lg border border-slate-200 text-blue-600 hover:scale-110 transition-all"
+                aria-label="Lagu sebelumnya"
+            >
+                <i data-lucide="skip-back" id="prev-icon" class="w-5 h-5"></i>
+            </button>
+
+            <button
+                id="music-control"
+                class="bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-slate-200 text-blue-600 hover:scale-110 transition-all"
+                aria-label="Play/Pause musik"
+            >
+                <i data-lucide="play" id="music-icon" class="w-6 h-6"></i>
+            </button>
+
+            <button
+                id="next-song"
+                class="bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-lg border border-slate-200 text-blue-600 hover:scale-110 transition-all"
+                aria-label="Lagu berikutnya"
+            >
+                <i
+                    data-lucide="skip-forward"
+                    id="next-icon"
+                    class="w-5 h-5"
+                ></i>
+            </button>
+
+            <!-- Mini player info (opsional) -->
+            <div
+                id="song-info"
+                class="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow border border-slate-200 text-xs font-medium text-slate-700 max-w-[120px] truncate hidden md:block"
+            >
+                <span id="current-song-title">Memuat...</span>
+            </div>
+        </div>
+
+        <!-- Prompt musik -->
+        <div
+            id="music-prompt"
+            class="fixed bottom-20 left-6 z-[70] bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg shadow-xl text-xs font-bold animate-pulse cursor-pointer flex items-center gap-2"
+        >
+            <i data-lucide="music" class="w-4 h-4"></i>
+            <span>Play Musik</span>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Letakkan ini di bagian paling atas di dalam DOMContentLoaded
+                AOS.init({
+                    once: true, // Animasi hanya berjalan sekali saat di-scroll pertama kali
+                    offset: 120 // Jarak (pixel) animasi mulai berjalan dari posisi asli
+                });
+
+                // Inisialisasi awal Ikon Lucide (Wajib ada agar ikon muncul)
+                lucide.createIcons();
+
+                // ==========================================
+                // 1. SCRIPT MENU NAVBAR (FIXED VERSION)
+                // ==========================================
+                const menuBtn = document.getElementById("menu-btn");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const iconBars = document.getElementById("icon-bars");
+                const iconClose = document.getElementById("icon-close");
+                const menuLinks = mobileMenu.querySelectorAll("a");
+
+                if (menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        const isMenuOpen =
+                            !mobileMenu.classList.toggle("hidden");
+
+                        if (isMenuOpen) {
+                            // Jika Menu Terbuka: Sembunyikan Garis Tiga, Tampilkan X
+                            iconBars.classList.replace("scale-100", "scale-0");
+                            iconBars.classList.replace(
+                                "opacity-100",
+                                "opacity-0"
+                            );
+
+                            iconClose.classList.replace("scale-0", "scale-100");
+                            iconClose.classList.replace(
+                                "opacity-0",
+                                "opacity-100"
+                            );
+                        } else {
+                            // Jika Menu Tertutup: Tampilkan Garis Tiga, Sembunyikan X
+                            iconBars.classList.replace("scale-0", "scale-100");
+                            iconBars.classList.replace(
+                                "opacity-0",
+                                "opacity-100"
+                            );
+
+                            iconClose.classList.replace("scale-100", "scale-0");
+                            iconClose.classList.replace(
+                                "opacity-100",
+                                "opacity-0"
+                            );
+                        }
+                    });
+
+                    // Otomatis balikkan ikon saat link diklik
+                    menuLinks.forEach(link => {
+                        link.addEventListener("click", () => {
+                            mobileMenu.classList.add("hidden");
+                            iconBars.classList.replace("scale-0", "scale-100");
+                            iconBars.classList.replace(
+                                "opacity-0",
+                                "opacity-100"
+                            );
+                            iconClose.classList.replace("scale-100", "scale-0");
+                            iconClose.classList.replace(
+                                "opacity-100",
+                                "opacity-0"
+                            );
+                        });
+                    });
+                }
+
+                // ==========================================
+                // 2. SCRIPT LIGHTBOX GAMBER (MODAL)
+                // ==========================================
+                const photoModal = document.getElementById("photoModal");
+                if (photoModal) {
+                    photoModal.addEventListener("click", function (e) {
+                        if (e.target === this) closeModal();
+                    });
+                }
+            });
+
+            // FUNGSI GLOBAL UNTUK GAMBAR
+            // (Harus di luar DOMContentLoaded agar bisa dipanggil oleh onclick di HTML)
+            function openModal(imgSrc) {
+                const modal = document.getElementById("photoModal");
+                const modalImg = document.getElementById("modalImg");
+
+                if (modal && modalImg) {
+                    modalImg.src = imgSrc;
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+                    // Mengunci scroll layar utama
+                    document.body.style.overflow = "hidden";
+                }
+            }
+
+            function closeModal() {
+                const modal = document.getElementById("photoModal");
+                if (modal) {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("flex");
+                    // Mengembalikan scroll layar utama
+                    document.body.style.overflow = "auto";
+                }
+            }
+
+            function closeModal() {
+                const modal = document.getElementById("photoModal");
+                if (modal) {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("flex");
+                    document.body.style.overflow = "auto";
+                }
+            }
+
+            // ==========================================
+            // 3. SCRIPT MUSIC PLAYER (CLEAN VERSION)
+            // ==========================================
+
+            // GANTI kode music player dengan ini:
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // ... (kode AOS dan lainnya tetap)
+
+                // ==========================================
+                // AUDIO PLAYLIST PLAYER - FIXED VERSION
+                // ==========================================
+                const bgMusic = document.getElementById("bg-music");
+                const musicBtn = document.getElementById("music-control");
+                const prevBtn = document.getElementById("prev-song");
+                const nextBtn = document.getElementById("next-song");
+                const musicIcon = document.getElementById("music-icon");
+                const musicPrompt = document.getElementById("music-prompt");
+                const songInfo = document.getElementById("song-info");
+                const songTitle = document.getElementById("current-song-title");
+
+                // PLAYLIST DATA
+                const playlist = [
+                    {
+                        title: "Neo Clan B - In My Dreams",
+                        src: "lagu/Neo Clan B - In My Dreams.mp3",
+                        artist: "Neo Clan B"
+                    },
+                    {
+                        title: "Acom Talamburang ft Ibot - Lentera",
+                        src: "lagu/Acom Talamburang ft Ibot - Lentera.mp3",
+                        artist: "Acom Talamburang ft Ibot"
+                    },
+                    {
+                        title: "Kreepeek ft Dhand - Have A Nice Dream",
+                        src: "lagu/Kreepeek ft Dhand - Have A Nice Dream.mp3",
+                        artist: "Kreepeek ft Dhand"
+                    },
+                    {
+                        title: "Kreepeek ft Dhand - Pergilah",
+                        src: "lagu/Kreepeek ft Dhand - Pergilah.mp3",
+                        artist: "Kreepeek ft Dhand"
+                    }
+                ];
+
+                let currentSongIndex = 0;
+                let isPlaying = false;
+                let isUserInteracted = false;
+
+                // ==========================================
+                // FUNGSI UTAMA - DIPERBAIKI
+                // ==========================================
+
+                // 1. FUNGSI UPDATE ICON (WAJIB ADA)
+                function updatePlayPauseIcon() {
+    // Coba Lucide dulu
+    if (typeof lucide !== 'undefined') {
+        if (isPlaying) {
+            musicIcon.setAttribute("data-lucide", "pause");
+        } else {
+            musicIcon.setAttribute("data-lucide", "play");
+        }
+        lucide.createIcons();
+    } else {
+        // Fallback ke SVG manual
+        const svgNS = "http://www.w3.org/2000/svg";
+        musicIcon.innerHTML = '';
+        
+        const svg = document.createElementNS(svgNS, "svg");
+        svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        svg.setAttribute("width", "24");
+        svg.setAttribute("height", "24");
+        svg.setAttribute("viewBox", "0 0 24 24");
+        svg.setAttribute("fill", "none");
+        svg.setAttribute("stroke", "currentColor");
+        svg.setAttribute("stroke-width", "2");
+        svg.setAttribute("stroke-linecap", "round");
+        svg.setAttribute("stroke-linejoin", "round");
+        
+        if (isPlaying) {
+            // Pause icon
+            svg.innerHTML = `
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            `;
+        } else {
+            // Play icon
+            svg.innerHTML = `<polygon points="5 3 19 12 5 21 5 3"></polygon>`;
+        }
+        
+        musicIcon.appendChild(svg);
+    }
+}
+
+                // 2. Fungsi untuk memuat lagu
+                function loadSong(index) {
+                    if (index < 0) index = playlist.length - 1;
+                    if (index >= playlist.length) index = 0;
+
+                    currentSongIndex = index;
+                    const song = playlist[currentSongIndex];
+
+                    // Hentikan lagu sebelumnya sebelum memuat yang baru
+                    bgMusic.pause();
+
+                    // Set source baru
+                    bgMusic.src = song.src;
+
+                    // Pastikan kita set metadata sebelum memutar
+                    bgMusic.load();
+
+                    songTitle.textContent = song.title;
+                    if (songInfo) {
+                        songInfo.title = `${song.title} - ${song.artist}`;
+                    }
+
+                    // Simpan lagu yang sedang diputar di localStorage
+                    localStorage.setItem(
+                        "currentSongIndex",
+                        currentSongIndex.toString()
+                    );
+
+                    // Jika sebelumnya sedang play, langsung play lagu baru
+                    if (isPlaying) {
+                        // Tunggu sedikit agar audio siap
+                        setTimeout(() => {
+                            playSong();
+                        }, 100);
+                    } else {
+                        // Pastikan ikon dalam state pause
+                        isPlaying = false;
+                        updatePlayPauseIcon();
+                    }
+                }
+
+                // 3. Fungsi untuk memutar lagu - DIPERBAIKI
+                function playSong() {
+                    bgMusic
+                        .play()
+                        .then(() => {
+                            isPlaying = true;
+                            updatePlayPauseIcon(); // PASTIKAN PAKAI FUNGSI INI
+                            updateMusicPrompt();
+                            isUserInteracted = true;
+                        })
+                        .catch(err => {
+                            console.log("Autoplay diblokir:", err);
+                            isPlaying = false;
+                            updatePlayPauseIcon(); // JANGAN LUPA UPDATE ICON SAAT ERROR
+                        });
+                }
+
+                // 4. Fungsi untuk pause lagu - DIPERBAIKI
+                function pauseSong() {
+                    bgMusic.pause();
+                    isPlaying = false;
+                    updatePlayPauseIcon(); // PASTIKAN PAKAI FUNGSI INI
+                }
+
+                // 5. Fungsi untuk update prompt
+                function updateMusicPrompt() {
+                    if (musicPrompt) {
+                        musicPrompt.innerHTML = `
+                <i data-lucide="music" class="w-4 h-4"></i>
+                <span>${playlist[currentSongIndex].title}</span>
+            `;
+                        lucide.createIcons();
+                    }
+                }
+
+                // 6. Fungsi untuk lagu berikutnya
+                function nextSong() {
+                    loadSong(currentSongIndex + 1);
+                    // loadSong() akan handle play jika isPlaying = true
+                }
+
+                // 7. Fungsi untuk lagu sebelumnya
+                function prevSong() {
+                    loadSong(currentSongIndex - 1);
+                    // loadSong() akan handle play jika isPlaying = true
+                }
+
+                // ==========================================
+                // EVENT LISTENER TAMBAHAN (PENTING!)
+                // ==========================================
+
+                // Event listener untuk audio ended (lagu selesai)
+                bgMusic.addEventListener("ended", function () {
+                    // Auto play lagu berikutnya
+                    nextSong();
+                });
+
+                // EVENT LISTENER BARU: Saat audio berhasil diputar
+                bgMusic.addEventListener("play", function () {
+                    isPlaying = true;
+                    updatePlayPauseIcon();
+                });
+
+                // EVENT LISTENER BARU: Saat audio di-pause
+                bgMusic.addEventListener("pause", function () {
+                    isPlaying = false;
+                    updatePlayPauseIcon();
+                });
+
+                // EVENT LISTENER BARU: Saat terjadi error
+                bgMusic.addEventListener("error", function (e) {
+                    console.error("Audio error:", e);
+                    isPlaying = false;
+                    updatePlayPauseIcon();
+
+                    // Coba lagu berikutnya jika error
+                    setTimeout(() => {
+                        nextSong();
+                    }, 1000);
+                });
+
+                // ==========================================
+                // INISIALISASI PLAYER
+                // ==========================================
+                function initMusicPlayer() {
+                    // Load lagu terakhir yang diputar dari localStorage
+                    const savedIndex = localStorage.getItem("currentSongIndex");
+                    if (savedIndex !== null) {
+                        currentSongIndex = parseInt(savedIndex) || 0;
+                        // Pastikan index valid
+                        if (currentSongIndex >= playlist.length) {
+                            currentSongIndex = 0;
+                        }
+                    }
+
+                    // Set volume
+                    bgMusic.volume = 0.5;
+
+                    // Mute dulu untuk mematuhi autoplay policy
+                    bgMusic.muted = true;
+
+                    // Load lagu pertama
+                    loadSong(currentSongIndex);
+
+                    // ==========================================
+                    // EVENT LISTENERS UNTUK TOMBOL
+                    // ==========================================
+
+                    // Tombol play/pause
+                    musicBtn.addEventListener("click", function (e) {
+                        e.stopPropagation();
+
+                        if (!isUserInteracted) {
+                            // First interaction
+                            isUserInteracted = true;
+                            bgMusic.muted = false;
+                            playSong();
+                        } else if (isPlaying) {
+                            pauseSong();
+                        } else {
+                            playSong();
+                        }
+                    });
+
+                    // Tombol previous
+                    prevBtn.addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        isUserInteracted = true;
+                        bgMusic.muted = false;
+                        prevSong();
+                    });
+
+                    // Tombol next
+                    nextBtn.addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        isUserInteracted = true;
+                        bgMusic.muted = false;
+                        nextSong();
+                    });
+
+                    // Prompt untuk mulai musik
+                    if (musicPrompt) {
+                        musicPrompt.addEventListener("click", function () {
+                            isUserInteracted = true;
+                            bgMusic.muted = false;
+                            playSong();
+                            this.style.display = "none";
+                        });
+
+                        // Auto hide prompt setelah 15 detik
+                        setTimeout(() => {
+                            if (musicPrompt && !isUserInteracted) {
+                                musicPrompt.style.opacity = "0";
+                                setTimeout(() => {
+                                    if (musicPrompt)
+                                        musicPrompt.style.display = "none";
+                                }, 500);
+                            }
+                        }, 15000);
+                    }
+
+                    // Kontrol keyboard (opsional)
+                    document.addEventListener("keydown", function (e) {
+                        if (
+                            e.target.tagName === "INPUT" ||
+                            e.target.tagName === "TEXTAREA"
+                        )
+                            return;
+
+                        switch (e.code) {
+                            case "Space":
+                                e.preventDefault();
+                                musicBtn.click();
+                                break;
+                            case "ArrowRight":
+                                nextBtn.click();
+                                break;
+                            case "ArrowLeft":
+                                prevBtn.click();
+                                break;
+                        }
+                    });
+
+                    // Update UI icons awal - PASTIKAN INI DIPANGGIL
+                    updatePlayPauseIcon();
+                }
+
+                // Panggil inisialisasi
+                initMusicPlayer();
+
+                // ... (kode lainnya tetap)
+            });
+        </script>
+
+        <div
+            id="photoModal"
+            class="fixed inset-0 z-[999] hidden bg-black/95 flex items-center justify-center p-4"
+        >
+            <button
+                onclick="closeModal()"
+                class="absolute top-6 right-6 text-white/70 hover:text-white transition-all"
+            >
+                <i data-lucide="x" class="w-12 h-12"></i>
+            </button>
+
+            <img
+                id="modalImg"
+                src=""
+                class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl animate-in zoom-in duration-300"
+            />
+        </div>
+    </body>
+</html>
